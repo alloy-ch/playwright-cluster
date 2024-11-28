@@ -22,7 +22,7 @@ export class SystemMonitor {
 
   private loads: SystemLoad[] = [];
 
-  private interval: NodeJS.Timer | null = null;
+  private interval: NodeJS.Timeout | null = null;
 
   // After init is called there is at least something in the cpuUsage thingy
   public async init(): Promise<void> {
