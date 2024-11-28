@@ -1,6 +1,6 @@
 {
   "name": "@alloy-ch/playwright-cluster",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Cluster management for playwright",
   "type": "module",
   "main": "dist/src/index.js",
