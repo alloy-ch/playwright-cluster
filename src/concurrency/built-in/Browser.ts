@@ -57,7 +57,7 @@ export class Browser extends ConcurrencyImplementation {
         debug('Starting repair');
         try {
           // will probably fail, but just in case the repair was not necessary
-          await browser.close();
+          await timeoutExecute(BROWSER_TIMEOUT, browser.close());
         } catch (e) {}
 
         // just relaunch as there is only one page per browser

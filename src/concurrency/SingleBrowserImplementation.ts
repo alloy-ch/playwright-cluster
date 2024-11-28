@@ -31,7 +31,7 @@ export abstract class SingleBrowserImplementation extends ConcurrencyImplementat
 
     try {
       // will probably fail, but just in case the repair was not necessary
-      await (this.browser as Browser).close();
+      await timeoutExecute(BROWSER_TIMEOUT, (this.browser as Browser).close());
     } catch (e) {
       /* istanbul ignore next */
       debug('Unable to close browser.');
